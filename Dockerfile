@@ -2,5 +2,5 @@
 FROM openjdk:13-jdk-alpine
 ENV TZ="Asia/Karachi"
 RUN mkdir -p /usr/local/jarlogs
-ADD https://bio.mobilinkgsm.com/1-cpsmfssyncservice.jar /1-cpsmfssyncservice.jar
-CMD ["java", "-jar", "1-cpsmfssyncservice.jar"]
+COPY 1-cps-service.jar /1-cps-service.jar
+CMD ["java", "-jar", "1-cps-service.jar"]
